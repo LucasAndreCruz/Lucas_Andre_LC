@@ -1,0 +1,50 @@
+﻿@model CadastroDePessoa.Models.Pessoa
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <h2 class="page-header">Tela de Cadastro</h2>
+
+    <form action="~/Registro/Index" method="post">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="PessoaId"> Código </label>
+                <input type="number" value"@Model.PessoaId" placeholder="Id" class="form-control" name="PessoaId">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="Nome">Nome</label>
+                <input type="text" value"@Model.Nome" name="Nome" placeholder="Nome" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="DataDeNascimento">Data de Nascimento</label>
+                <input type="date" value"@Model.DataDeNascimento" name="DataDeNascimento" placeholder="Data de Nascimento" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="RG">RG</label>
+                <input type="text" value"@Model.RG" name="RG" placeholder="RG" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="CPF">CPF</label>
+                <input type="text" value"@Model.CPF" name="CPF" placeholder="CPF" class="form-control">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                <a href="/Home/Index" class="btn btn-default">Cancelar</a>
+            </div>
+        </div>
+    </form>
+</div>
